@@ -1,0 +1,117 @@
+html, body, #root, .ant-layout {
+  height: 100%;
+  margin: 0;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.custom-button {
+  background-color: white;
+  border: 1px solid #ccc;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 14px;
+}
+
+.custom-button::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.button-1::before {
+  border-width: 10px 20px 10px 0;
+  border-color: transparent gray transparent transparent;
+}
+
+.button-2::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid gray;
+  position: absolute;
+  top: 20%;
+  left: calc(50% - 10px);
+}
+
+.button-2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid gray;
+  position: absolute;
+  bottom: 20%;
+  left: calc(50% - 10px);
+}
+
+.button-3::before {
+  border-width: 10px 0 10px 20px;
+  border-color: transparent transparent transparent gray;
+}
+
+.custom-button span {
+  margin-top: 40px;
+}
+
+.button-4::before, .button-5::before, .button-6::before, .button-7::before, .button-8::before, .button-9::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: gray;
+}
+
+.button-4::before {
+  width: 60px;
+  height: 30px;
+}
+
+.button-5::before {
+  width: 60px;
+  height: 60px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.button-6::before {
+  width: 70px;
+  height: 40px;
+  transform: translate(-50%, -50%) skewY(-20deg);
+}
+
+.button-7::before {
+  width: 50px;
+  height: 50px;
+}
+
+.button-8::before {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.button-9::before {
+  width: 70px;
+  height: 50px;
+  border-radius: 50%;
+}
